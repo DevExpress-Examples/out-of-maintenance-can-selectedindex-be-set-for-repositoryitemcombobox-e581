@@ -18,19 +18,15 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace></RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject></StartupObject>
     <FileUpgradeFlags></FileUpgradeFlags>
     <UpgradeBackupLocation></UpgradeBackupLocation>
-    <OptionExplicit>On</OptionExplicit>
-    <OptionCompare>Binary</OptionCompare>
-    <OptionStrict>Off</OptionStrict>
-    <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile></ConfigurationOverrideFile>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -50,7 +46,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile></ConfigurationOverrideFile>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -67,49 +63,43 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Xml.Linq" />
-    <Import Include="System.Threading.Tasks" />
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Accessibility">
       <Name>Accessibility</Name>
     </Reference>
     <Reference Include="DevExpress.Printing.v13.1.Core">
       <Name>DevExpress.Printing.v13.1.Core</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Data.v13.1">
       <Name>DevExpress.Data.v13.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v13.1">
       <Name>DevExpress.Utils.v13.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v13.1">
       <Name>DevExpress.XtraBars.v13.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v13.1">
       <Name>DevExpress.XtraEditors.v13.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v13.1">
       <Name>DevExpress.XtraPrinting.v13.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v13.1">
       <Name>DevExpress.XtraGrid.v13.1</Name>
       <AssemblyFolderKey>hklm\dx debug v6.1</AssemblyFolderKey>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
