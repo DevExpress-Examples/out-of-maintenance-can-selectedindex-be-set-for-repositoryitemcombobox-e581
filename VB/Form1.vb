@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -12,6 +11,7 @@ Namespace SetComboBoxValue
 	''' </summary>
 	Public Class Form1
 		Inherits System.Windows.Forms.Form
+
 		Private comboBoxEdit1 As DevExpress.XtraEditors.ComboBoxEdit
 		Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
 		Private gridControl1 As DevExpress.XtraGrid.GridControl
@@ -47,7 +47,7 @@ Namespace SetComboBoxValue
 		''' <summary>
 		''' Clean up any resources being used.
 		''' </summary>
-		Protected Overrides Overloads Sub Dispose(ByVal disposing As Boolean)
+		Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 			If disposing Then
 				If components IsNot Nothing Then
 					components.Dispose()
@@ -82,14 +82,14 @@ Namespace SetComboBoxValue
 			Me.dataSet1 = New System.Data.DataSet()
 			Me.simpleButton2 = New DevExpress.XtraEditors.SimpleButton()
 			Me.bindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-			CType(Me.comboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.dataTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.repositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.barManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.dataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.bindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.comboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.dataTable1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.repositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.barManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.dataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.bindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.SuspendLayout()
 			' 
 			' comboBoxEdit1
@@ -107,7 +107,8 @@ Namespace SetComboBoxValue
 			Me.simpleButton1.Size = New System.Drawing.Size(168, 23)
 			Me.simpleButton1.TabIndex = 1
 			Me.simpleButton1.Text = "Set Day Index 1"
-'			Me.simpleButton1.Click += New System.EventHandler(Me.simpleButton1_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
 			' 
 			' gridControl1
 			' 
@@ -196,7 +197,8 @@ Namespace SetComboBoxValue
 			Me.simpleButton2.Size = New System.Drawing.Size(168, 23)
 			Me.simpleButton2.TabIndex = 1
 			Me.simpleButton2.Text = "Get Selected Day and Index"
-'			Me.simpleButton2.Click += New System.EventHandler(Me.simpleButton2_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
 			' 
 			' bindingSource1
 			' 
@@ -217,15 +219,16 @@ Namespace SetComboBoxValue
 			Me.Controls.Add(Me.barDockControlTop)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
-			CType(Me.comboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.dataTable1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.repositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.barManager1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.dataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.bindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
+			DirectCast(Me.comboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.dataTable1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.repositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.barManager1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.dataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.bindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.ResumeLayout(False)
 
 		End Sub
@@ -234,12 +237,12 @@ Namespace SetComboBoxValue
 		''' <summary>
 		''' The main entry point for the application.
 		''' </summary>
-		<STAThread> _
+		<STAThread>
 		Shared Sub Main()
 			Application.Run(New Form1())
 		End Sub
 
-		Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 			dataTable1.Rows.Add(New Object() { "Friday" })
 			dataTable1.Rows.Add(New Object() { "Saturday" })
 
@@ -270,15 +273,15 @@ Namespace SetComboBoxValue
 
 			' XtraBars
 			val = barEditItem1.EditValue
-			result &= String.Format("XtraBars editor: " & Constants.vbTab & " {0} / {1}", val, repositoryItemComboBox1.Items.IndexOf(val))
+			result &= String.Format("XtraBars editor: " & vbTab & " {0} / {1}", val, repositoryItemComboBox1.Items.IndexOf(val))
 
 			' stand-alone editor
 			val = comboBoxEdit1.EditValue
-			result &= String.Format(Constants.vbLf & "ComboBoxEdit: " & Constants.vbTab & " {0} / {1}", val, repositoryItemComboBox1.Items.IndexOf(val))
+			result &= String.Format(vbLf & "ComboBoxEdit: " & vbTab & " {0} / {1}", val, repositoryItemComboBox1.Items.IndexOf(val))
 
 			' XtraGrid
 			val = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Day")
-			result &= String.Format(Constants.vbLf & "XtraGrid cell: " & Constants.vbTab & " {0} / {1}", val, repositoryItemComboBox1.Items.IndexOf(val))
+			result &= String.Format(vbLf & "XtraGrid cell: " & vbTab & " {0} / {1}", val, repositoryItemComboBox1.Items.IndexOf(val))
 
 			MessageBox.Show(result)
 		End Sub
