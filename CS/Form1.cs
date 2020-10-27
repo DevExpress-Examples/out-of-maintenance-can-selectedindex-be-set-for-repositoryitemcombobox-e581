@@ -259,6 +259,7 @@ namespace SetComboBoxValue {
             dataTable1.Rows.Add(new object[] { "Saturday" });
 
             comboBoxEdit1.Properties.Assign(repositoryItemComboBox1);
+            gridControl1.RepositoryItems.Add(repositoryItemComboBox1);
         }
 
         private void simpleButton1_Click(object sender, System.EventArgs e) {
