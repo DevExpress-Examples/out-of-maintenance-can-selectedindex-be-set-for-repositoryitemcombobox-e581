@@ -244,6 +244,7 @@ Namespace SetComboBoxValue
 			dataTable1.Rows.Add(New Object() { "Saturday" })
 
 			comboBoxEdit1.Properties.Assign(repositoryItemComboBox1)
+			gridControl1.RepositoryItems.Add(repositoryItemComboBox1)
 		End Sub
 
 		Private Sub simpleButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles simpleButton1.Click
